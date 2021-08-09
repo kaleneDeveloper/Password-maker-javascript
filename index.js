@@ -30,6 +30,7 @@ const generatePassword = () => {
         displayPass.value = password;
         displayPass.select();
         document.execCommand("copy");
+        document.getSelection().removeAllRanges();
 
         generateButton.textContent = "Text copy !";
         setTimeout(() => {
