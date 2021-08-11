@@ -15,7 +15,6 @@ const generatePassword = () => {
     let data = [];
     let password = "";
     let x = 0;
-
     lowercase.checked ? data.push(...dataLowercase) : null;
     uppercase.checked ? data.push(...dataUppercase) : null;
     numbers.checked ? data.push(...dataNumbers) : null;
@@ -61,6 +60,7 @@ const generatePassword = () => {
             }
             x++;
         }
+
         for (i = 0; i < rangeValue.value - x; i++) {
             dataIndex = Math.floor(Math.random() * data.length);
             password += data[dataIndex];
